@@ -7,8 +7,8 @@ import tempfile
 import tensorflow as tf
 
 # Load models
-detection_model = YOLO(r"D:\Downloads\waste_classification\Garbage_detection.pt")  # Path to YOLO model
-classifier_model = tf.keras.models.load_model(r"D:\Downloads\waste_classification\waste_classifier_vgg16 (1).h5")  # Path to classifier
+detection_model = YOLO("models/Garbage_detection.pt")
+classifier_model = tf.keras.models.load_model("models/waste_classifier_vgg16.h5")
 class_names = ['cardboard','Food Organic', 'glass','Metal','Miscellaneous Trash', 'paper','plastic','Textile Trash','Vegitation']  # Customize this
 
 st.title("Garbage Detection & Classification App")
